@@ -23,37 +23,39 @@ The implementation mainly consists of three main components: deploy, mint, and d
 
 Deployment is a JSON file, mainly containing three parts:
 
-   a. Basic information of the NFT.
-   b. Traits of the NFT, which exist in base64 format.
-   c. Parser: The parser is a function with a unified interface, stored on-chain in base64 format. The frontend can directly obtain images through the parser. The main function of the parser is to generate the final NFT based on the tokenID and DNA of the NFT. Example code for the parser:
-    
-    `(_tokenID, _dna, traits) => {
-      //code
-      ......
-      return svg;
-    }`
+   a. Basic information of the NFT.  
+   b. Traits of the NFT, which exist in base64 format.  
+   c. Parser: The parser is a function with a unified interface, stored on-chain in base64 format. The frontend can directly obtain images through the parser.  
+   The main function of the parser is to generate the final NFT based on the tokenID and DNA of the NFT. Example code for the parser:  
+     
+    `(_tokenID, _dna, traits) => {  
+      //code  
+      ......  
+      return svg;  
+    }`  
 
 
 ### 2. Mint
 
 The mint file of nft-brc-721 is based on the implementation of the brc20 mint file, with the following format:
 
-`{
-"p": "nft-brc-721",
-"op": "mint",
-"tick": "matchstick",
-"in": "",
-"id": "0",
-"d": "geek"
-}`
-
+`{  
+"p": "nft-brc-721",  
+"op": "mint",  
+"tick": "matchstick",  
+"in": "",  
+"id": "0",  
+"d": "geek"  
+}`  
+  
 
 ### 3. Display Layer
 
-The display layer is mainly implemented through the parser. After the frontend obtains the NFT-related data, it passes it to the parser and displays the obtained image. Example code:
-{
-    
-}
-
-
+The display layer is mainly implemented through the parser. After the frontend obtains the NFT-related data, it passes it to the parser and displays the obtained image.  
+Example code:  
+{  
+    //code  
+}  
+  
+  
 In summary, the nft-brc-721 protocol is a set of NFT protocols with features such as fully on-chain storage, block space occupancy reduced by more than 95%, randomness, unified interface, and stronger extensibility. The implementation mainly consists of deploy, mint, and display layer components. The parser is a function with a unified interface, stored on-chain in base64 format, and the frontend can directly obtain images through the parser.

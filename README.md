@@ -91,7 +91,7 @@ Example code:
 }  
 ```  
 
-## For the effect of using nft-brc-721 on block space:
+## For the effect of using nft-brc-721 on block space
 Let's use the example of Matchstick People NFTs for comparison. The size of the data for Matchstick People NFTs is not completely consistent, ranging from 8kb to 14kb, with a median value of 11kb. 
 
 If there are 1000 Matchstick People NFTs, the total space occupied would be 1000 * 11 = 11000kb. 

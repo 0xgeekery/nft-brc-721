@@ -36,12 +36,24 @@ Deployment is a JSON file, mainly containing three parts:
    b. Traits of the NFT, which exist in base64 format.  
    c. Parser: The parser is a function with a unified interface, stored on-chain in base64 format. The frontend can directly obtain images through the parser.  
    The main function of the parser is to generate the final NFT based on the tokenID and DNA of the NFT. Example code for the parser:  
-     
-    `(_tokenID, _dna, traits) => {  
+    ```javascript 
+    (_tokenID, _dna, traits) => {  
       //code  
       ......  
       return svg;  
-    }`  
+    }
+    ```
+
+| Key         | Required | Description                                                  |
+| ----------- | -------- | ------------------------------------------------------------ |
+| p           | YES      | value: nft-brc-721 |
+| op          | YES      | value: deploy |
+| tick        | YES      | NFT collection of names, such as matches |
+| supply      | YES      | NFT maximum quantity of supply |
+| v           | YES      | Protocol version, backward compatible |
+| traits      | YES      | NFT traits,string,base64 |
+| parser      | YES      | NFT parser,string, base64 |
+
 
 
 ### 2. Mint

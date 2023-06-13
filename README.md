@@ -68,7 +68,16 @@ The mint file of nft-brc-721 is based on the implementation of the brc20 mint fi
 "id": "0",
 "d": "geek"
 }`  
-  
+
+| Key         | Required | Description                                                  |
+| ----------- | -------- | ------------------------------------------------------------ |
+| p           | YES      | value: nft-brc-721 |
+| op          | YES      | value: mint |
+| tick        | YES      | NFT collection of names, such as matches |
+| in          | YES      | The inscription deploy of NFT |
+| id          | YES      | ID of NFT, reference tokenID of Ethereum. |
+| d           | YES      | Represents a part of the DNA, the user input, the user is advised to enter their own name. "d" and "id" determines the NFT's DNA. |
+
 
 ### 3. Display
 

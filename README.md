@@ -11,7 +11,7 @@ nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically des
 1. Fully on-chain storage.
 2. Minting an NFT reduces the block space occupancy by more than 97% .
 3. Randomness: We introduce the concept of DNA for NFTs, and the characteristics of NFTs are determined only after they are minted.
-4. Unified interface for easy integration: Only 3 lines of code are needed for the frontend to display NFTs. Third-party platforms can easily integrate.
+4. Unified interface for easy integration: Only 2 lines of code are needed for the frontend to display NFTs. Third-party platforms can easily integrate.
 5. Stronger extensibility: We introduce the concept of a parser on-chain, and developers can implement their own parsers in the interface.
 
 ## Implementation
@@ -83,9 +83,12 @@ The mint file of nft-brc-721 is based on the implementation of the brc20 mint fi
 
 The display layer is mainly implemented through the parser. After the frontend obtains the NFT-related data, it passes it to the parser and displays the obtained image.  
 Example code:  
-{  
+`{  
     //code  
-}  
+    const make_nft = eval((atob(nft_deploy_data.parser)))(nft_mint_data.id,nft_mint_data.d,JSON.parse(atob(nft_deploy_data.traits)));
+    showNFT(make_nft);
+}
+`  
   
   
 In summary, the nft-brc-721 protocol is a set of NFT protocols with features such as fully on-chain storage, block space occupancy reduced by more than 95%, randomness, unified interface, and stronger extensibility. The implementation mainly consists of deploy, mint, and display layer components. The parser is a function with a unified interface, stored on-chain in base64 format, and the frontend can directly obtain images through the parser.

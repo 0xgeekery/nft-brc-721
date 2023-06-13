@@ -48,7 +48,7 @@ Deployment is a JSON file, mainly containing three parts:
 | ----------- | -------- | ------------------------------------------------------------ |
 | p           | YES      | value: nft-brc-721 |
 | op          | YES      | value: deploy |
-| tick        | YES      | NFT collection of names, such as matches |
+| tick        | YES      | The name of the NFT collection, such as CryptoPunks |
 | supply      | YES      | NFT maximum quantity of supply |
 | v           | YES      | Protocol version, backward compatible |
 | traits      | YES      | NFT traits,string,base64 |
@@ -73,9 +73,9 @@ The mint file of nft-brc-721 is based on the implementation of the brc20 mint fi
 | ----------- | -------- | ------------------------------------------------------------ |
 | p           | YES      | value: nft-brc-721 |
 | op          | YES      | value: mint |
-| tick        | YES      | NFT collection of names, such as matches |
+| tick        | YES      | The name of the NFT collection, such as CryptoPunks |
 | in          | YES      | The inscription deploy of NFT |
-| id          | YES      | ID of NFT, reference tokenID of Ethereum. |
+| id          | YES      | ID of NFT, reference tokenID of Ethereum NFT. |
 | d           | YES      | Represents a part of the DNA, the user input, the user is advised to enter their own name. "d" and "id" determines the NFT's DNA. |
 
 

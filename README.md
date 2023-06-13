@@ -9,7 +9,7 @@ nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically des
 ## Features of nft-brc-721
 
 1. Fully on-chain storage.
-2. Minting an NFT reduces the block space occupancy by more than 97% .
+2. Minting an NFT reduces the block space occupancy by more than 97% () .
 3. Randomness: We introduce the concept of DNA for NFTs, and the characteristics of NFTs are determined only after they are minted.
 4. Unified interface for easy integration: Only 2 lines of code are needed for the frontend to display NFTs. Third-party platforms can easily integrate.
 5. Stronger extensibility: We introduce the concept of a parser on-chain, and developers can implement their own parsers in the interface.
@@ -90,6 +90,19 @@ Example code:
     showNFT(make_nft);
 }  
 ```  
+
+## For the effect of using nft-brc-721 on block space:
+Let's use the example of Matchstick People NFTs for comparison. The size of the data for Matchstick People NFTs is not completely consistent, ranging from 8kb to 14kb, with a median value of 11kb. 
+
+If there are 1000 Matchstick People NFTs, the total space occupied would be 1000 * 11 = 11000kb. 
+
+If Matchstick People NFTs use NFT-BRC-721, what would be the total space occupied? The deployment file is 65kb, and the mint file is 170b. 
+
+The total space occupied would be: 65kb + 170 * 1000/1000 = 235kb. 
+
+Comparing the two: 
+
+Percentage decrease in storage space: (11000-235)/11000 * 100 = 97.86%.
   
-  
+
 In summary, the nft-brc-721 protocol is a set of NFT protocols with features such as fully on-chain storage, block space occupancy reduced by more than 95%, randomness, unified interface, and stronger extensibility. The implementation mainly consists of deploy, mint, and display layer components. The parser is a function with a unified interface, stored on-chain in base64 format, and the frontend can directly obtain images through the parser.

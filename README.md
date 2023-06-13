@@ -2,7 +2,7 @@
 
 nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically designed for the ordinals ecosystem, aiming to solve the following problems:
 
-1. NFT data must be stored entirely on-chain.
+1. NFT data is stored entirely on-chain.
 2. NFT data stored on-chain should be as small as possible.
 3. NFTs should not only be images, but also have their own names and quantities, and more importantly, they should have randomness and uniqueness.
 
@@ -18,6 +18,15 @@ nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically des
 
 The implementation mainly consists of three main components: deploy, mint, and display layer.
 ![NFT-BRC-721](./images/nbrc-721.png "NFT-BRC-721")
+
+
+### The design architecture of NFT-BRC-721
+The NFT data on the chain is divided into three structural levels.
+1. Base info, traits  
+2. Parser
+3. Mint inscription
+![NFT-BRC-721](./images/structure.png "NFT-BRC-721")
+
 
 ### 1. Deploy
 
@@ -39,17 +48,17 @@ Deployment is a JSON file, mainly containing three parts:
 
 The mint file of nft-brc-721 is based on the implementation of the brc20 mint file, with the following format:
 
-`{  
-"p": "nft-brc-721",  
-"op": "mint",  
-"tick": "matchstick",  
-"in": "",  
-"id": "0",  
-"d": "geek"  
+`{
+"p": "nft-brc-721",
+"op": "mint",
+"tick": "matchstick",
+"in": "",
+"id": "0",
+"d": "geek"
 }`  
   
 
-### 3. Display Layer
+### 3. Display
 
 The display layer is mainly implemented through the parser. After the frontend obtains the NFT-related data, it passes it to the parser and displays the obtained image.  
 Example code:  

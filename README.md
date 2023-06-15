@@ -102,4 +102,10 @@ Comparing the two:
 Percentage decrease in storage space: (11000-225)/11000 * 100 = 97.95%.
   
 
+## Randomness of NFT === DNA
+DNA is the digitalized description of NFT, and DNA is unique. Taking the Matchstick People NFT as an example, the probability of two Matchstick People being the same is less than 1/10,000,000,000.
+The implementation of DNA is not fixed,  Matchstick People is only a demonstration method.
+![NFT-BRC-721](./images/dna.png "NFT-BRC-721")
+
+
 In summary, the nft-brc-721 protocol is a set of NFT protocols with features such as fully on-chain storage, block space occupancy reduced by more than 95%, randomness, unified interface, and stronger extensibility. The implementation mainly consists of deploy, mint, and display layer components. The parser is a function with a unified interface, stored on-chain in base64 format, and the frontend can directly obtain images through the parser.

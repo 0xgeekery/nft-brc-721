@@ -48,7 +48,7 @@ Deployment is a JSON file, mainly containing three parts:
 | tick        | YES      | The name of the NFT collection, such as CryptoPunks |
 | supply      | YES      | NFT maximum quantity of supply |
 | v           | YES      | Protocol version, backward compatible |
-| traits      | YES      | NFT traits,string,base64 |
+| traits      | YES      | NFT traits / Recursive inscriptions,string,base64 |
 | parser      | YES      | NFT parser,string, base64 |
 
 
@@ -60,7 +60,7 @@ The mint file of nft-brc-721 is based on the implementation of the brc20 mint fi
 `{
 "p": "nft-brc-721",
 "op": "mint",
-"tick": "matchstick",
+"tick": "Matchstick People",
 "in": "",
 "id": "0",
 "d": "geek"
@@ -70,10 +70,10 @@ The mint file of nft-brc-721 is based on the implementation of the brc20 mint fi
 | ----------- | -------- | ------------------------------------------------------------ |
 | p           | YES      | value: nft-brc-721 |
 | op          | YES      | value: mint |
-| tick        | YES      | The name of the NFT collection, such as CryptoPunks |
+| tick        | YES      | The name of the NFT collection, such as "Matchstick People" |
 | in          | YES      | The inscription deploy of NFT |
 | id          | YES      | ID of NFT, reference tokenID of Ethereum NFT. |
-| d           | YES      | Represents a part of the DNA, the user input, the user is advised to enter their own name. "d" and "id" determines the NFT's DNA. |
+| d           | YES      | Represents a part of the DNA, the user input, the user is advised to enter their own name. |
 
 
 ### 3. Display
@@ -93,13 +93,13 @@ Let's use the example of Matchstick People NFTs for comparison. The size of the 
 
 If there are 1000 Matchstick People NFTs, the total space occupied would be 1000 * 11 = 11000kb. 
 
-If Matchstick People NFTs use NFT-BRC-721, what would be the total space occupied? The deployment file is 65kb, and the mint file is 170b. 
+If Matchstick People NFTs use NFT-BRC-721, what would be the total space occupied? The deployment file is 65kb, and the mint file is 160b. 
 
-The total space occupied would be: 65kb + 170 * 1000/1000 = 235kb. 
+The total space occupied would be: 65kb + 160 * 1000/1000 = 225kb. 
 
 Comparing the two: 
 
-Percentage decrease in storage space: (11000-235)/11000 * 100 = 97.86%.
+Percentage decrease in storage space: (11000-225)/11000 * 100 = 97.95%.
   
 
 In summary, the nft-brc-721 protocol is a set of NFT protocols with features such as fully on-chain storage, block space occupancy reduced by more than 95%, randomness, unified interface, and stronger extensibility. The implementation mainly consists of deploy, mint, and display layer components. The parser is a function with a unified interface, stored on-chain in base64 format, and the frontend can directly obtain images through the parser.

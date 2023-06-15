@@ -1,4 +1,4 @@
-# nft-brc-721
+# NFT-BRC-721
 
 nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically designed for the ordinals ecosystem, aiming to solve the following problems:
 
@@ -108,4 +108,13 @@ The implementation of DNA is not fixed,  Matchstick People is only a demonstrati
 ![NFT-BRC-721](./images/dna.png "NFT-BRC-721")
 
 
+## Verify the feasibility of NFT-BRC-721
+We deployed  Matchstick People NFT to demonstrate how the NFT-BRC -721 works and how well it optimizes the block space.
+deploy:
+https://ordinals.com/inscription/d4d2aba4b99288c0e925ec7f5b5a8fd13ccf3069a05ec7fad1536df242d7bcc1i0
+mint:
+https://ordinals.com/inscription/cf67483000b3ac3791f580c7c7b421b75f5638a2630a85e1829cac0dd29bd406i0
+
+
+## Summary
 In summary, the nft-brc-721 protocol is a set of NFT protocols with features such as fully on-chain storage, block space occupancy reduced by more than 95%, randomness, unified interface, and stronger extensibility. The implementation mainly consists of deploy, mint, and display layer components. The parser is a function with a unified interface, stored on-chain in base64 format, and the frontend can directly obtain images through the parser.

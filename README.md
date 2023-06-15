@@ -16,9 +16,6 @@ nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically des
 
 ## Implementation
 
-The implementation mainly consists of three main components: deploy, mint, and display layer.
-![NFT-BRC-721](./images/nbrc-721.png "NFT-BRC-721")
-
 
 ### The design architecture of NFT-BRC-721
 The NFT data on the chain is divided into three structural levels.

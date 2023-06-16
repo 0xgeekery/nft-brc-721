@@ -9,7 +9,7 @@ nft-brc-721 (abbreviated as nbrc-721) is a set of NFT protocols specifically des
 ## Features of nft-brc-721
 
 1. Fully on-chain storage.
-2. Minting an NFT reduces the block space occupancy by more than 97% () .
+2. Minting an NFT reduces the block space occupancy by more than 97% (Reference 1000 Matchstick People) .
 3. Randomness: We introduce the concept of DNA for NFTs, and the characteristics of NFTs are determined only after they are minted.
 4. Unified interface for easy integration: Only 2 lines of code are needed for the frontend to display NFTs. Third-party platforms can easily integrate.
 5. Stronger extensibility: We introduce the concept of a parser on-chain, and developers can implement their own parsers in the interface.

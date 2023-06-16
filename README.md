@@ -24,6 +24,9 @@ The NFT data on the chain is divided into three structural levels.
 3. Mint inscription
 ![NFT-BRC-721](./images/structure.png "NFT-BRC-721")
 
+### Comparison of Ethereum NFT and NFT-BRC-721
+![NFT-BRC-721](./images/comparison.png "NFT-BRC-721")
+
 
 ### 1. Deploy
 

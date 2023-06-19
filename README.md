@@ -86,8 +86,8 @@ Example code:
 ```
 {  
     //code  
-    const make_nft = eval((atob(nft_deploy_data.parser)))(nft_mint_data.id,nft_mint_data.d,JSON.parse(atob(nft_deploy_data.traits)));
-    showNFT(make_nft);
+    const nft = eval((atob(nft_deploy_data.parser)))(nft_mint_data.id,nft_mint_data.d,JSON.parse(atob(nft_deploy_data.traits)));
+    showNFT(nft);
 }  
 ```  
 

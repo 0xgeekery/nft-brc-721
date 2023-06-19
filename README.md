@@ -81,7 +81,7 @@ The mint file of nft-brc-721 is based on the implementation of the brc20 mint fi
 
 ### 3. Display
 
-The display layer is mainly implemented through the parser. After the frontend obtains the NFT-related data, it passes it to the parser and displays the obtained image.  
+Call "parser" in the deploy file and pass in the parameters "id","d","traits" for "parser". "parser" will return svg.
 Example code:  
 ```
 {  

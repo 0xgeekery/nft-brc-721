@@ -33,7 +33,7 @@ The NFT data on the chain is divided into three structural levels.
 Deployment is a JSON file, mainly containing three parts:
 
    a. Basic information of the NFT.  
-   b. Traits of the NFT, which exist in base64 format.  
+   b. Traits of the NFT / recursive inscription array, which exist in base64 format.  
    c. Parser: The parser is a function with a unified interface, stored on-chain in base64 format. The frontend can directly obtain images through the parser.  
    The main function of the parser is to generate the final NFT based on the tokenID and DNA of the NFT. Example code for the parser:  
     
